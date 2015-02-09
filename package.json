@@ -1,0 +1,30 @@
+{
+  "name": "pi-434-light",
+  "version": "0.0.1",
+  "description": "Native JS libary for controlling wireless power switches on the 434 frequency",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daanoz/pi-434-light"
+  },
+  "keywords": [
+    "kaku",
+    "klik",
+    "aan",
+    "klik",
+    "uit",
+    "434",
+    "mhz",
+    "433.93mhz",
+    "wiring-pi"
+  ],
+  "author": "Daan Sieben",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daanoz/pi-434-light/issues"
+  },
+  "homepage": "https://github.com/daanoz/pi-434-light"
+}
