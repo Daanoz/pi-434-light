@@ -6,9 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies" : {
+    "wiring-pi" : "latest"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/daanoz/pi-434-light"
+    "url": "git@github.com:daanoz/pi-434-light.git"
   },
   "keywords": [
     "kaku",
