@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies" : {
+    "wiring-pi" : "latest"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:daanoz/pi-434-light.git"
