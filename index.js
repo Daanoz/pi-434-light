@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require('./lib/pi-434-light.js')
+module.exports = require('./lib/pi-434-light.js')
