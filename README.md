@@ -18,7 +18,7 @@ Based on the C++ code written by [randysimons](http://randysimons.nl), [weetjewe
 ## Install
 
 ```
-npm install daanoz/pi-434-light
+npm install pi-434-light
 ```
 
 ## Generic usage
