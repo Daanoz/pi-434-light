@@ -49,14 +49,83 @@ var kaku = piLight.kaku(17);
 
 **kaku.sendSwitch(channel, device, state);**
 
-channel = (char)one of the 16 channels
+channel = (char)one of the 16 channels [A - P]
 
-device = (int)one of the 16 devices on the channel [1-16]
+device = (int)one of the 16 devices on the channel [1 - 16]
 
 state = (boolean) true for on, false for off 
 
 ```javascript
 kaku.sendSwitch('A', 2, true);
+```
+
+## Elro control module
+
+**piLight.elro(pin, [period])**
+
+pin = data pin of transmitter
+
+period = bit interval, default: 320
+
+```javascript
+var elro = piLight.elro(17);
+```
+
+**elro.sendSwitch(channel, device, state);**
+
+systemCode = (int)one of the 32 channels [1 - 32]
+
+device = (char)one of the 5 devices on the channel [A - E]
+
+state = (boolean) true for on, false for off 
+
+```javascript
+elro.sendSwitch(2, 'A', true);
+```
+
+## Action control module
+
+**piLight.action(pin, [period])**
+
+pin = data pin of transmitter
+
+period = bit interval, default: 320
+
+```javascript
+var action = piLight.action(17);
+```
+
+**action.sendSwitch(channel, device, state);**
+
+systemCode = (int)one of the 32 channels [1 - 32]
+
+device = (char)one of the 5 devices on the channel [A - E]
+
+state = (boolean) true for on, false for off 
+
+```javascript
+action.sendSwitch(2, 'A', true);
+```
+## Blokker control module
+
+**piLight.blokker(pin, [period])**
+
+pin = data pin of transmitter
+
+period = bit interval, default: 320
+
+```javascript
+var blokker = piLight.blokker(17);
+```
+
+**blokker.sendSwitch(device, state);**
+
+device = (int)one of the 16 devices [1 - 16]
+
+state = (boolean) true for on, false for off 
+
+```javascript
+blokker.sendSwitch(2, true);
 ```
 
 ## Contributing
