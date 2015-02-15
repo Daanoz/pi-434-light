@@ -4,8 +4,11 @@ Uses the wiring-pi bindings from [Eugenware](https://github.com/eugeneware/wirin
 
 Based on the C++ code written by [randysimons](http://randysimons.nl), [weetjewel](http://weejewel.tweakblogs.net/blog/8665/lampen-schakelen-met-een-raspberry-pi.html) and bugfix by [mouse86](http://eeo.tweakblogs.net/blog/11427/rpi2-bugfix-kaku-lampen)
 
-### Currently supported
-- Klik Aan Klik Uit (kika, 434 Mhz band)
+### Currently supported modules
+- [Klik Aan Klik Uit (kika)](http://www.klikaanklikuit.nl/home/)
+- [Elro](http://www.elro.eu/en/products/cat/home-automation/home-control1/receivers-on-off1)
+- Blokker
+- [Impuls (action)](http://www.voordeelmuis.nl/img/gif/1246/1246690.gif)
 
 ### Requirements
 - Node version 0.10.x (because of the wiringPi bindings)
@@ -49,14 +52,83 @@ var kaku = piLight.kaku(17);
 
 **kaku.sendSwitch(channel, device, state);**
 
-channel = (char)one of the 16 channels
+channel = (char)one of the 16 channels [A - P]
 
-device = (int)one of the 16 devices on the channel [1-16]
+device = (int)one of the 16 devices on the channel [1 - 16]
 
 state = (boolean) true for on, false for off 
 
 ```javascript
 kaku.sendSwitch('A', 2, true);
+```
+
+## Elro control module
+
+**piLight.elro(pin, [period])**
+
+pin = data pin of transmitter
+
+period = bit interval, default: 320
+
+```javascript
+var elro = piLight.elro(17);
+```
+
+**elro.sendSwitch(channel, device, state);**
+
+systemCode = (int)one of the 32 channels [1 - 32]
+
+device = (char)one of the 5 devices on the channel [A - E]
+
+state = (boolean) true for on, false for off 
+
+```javascript
+elro.sendSwitch(2, 'A', true);
+```
+
+## Impuls control module
+
+**piLight.impuls(pin, [period])**
+
+pin = data pin of transmitter
+
+period = bit interval, default: 320
+
+```javascript
+var impuls = piLight.impuls(17);
+```
+
+**impuls.sendSwitch(channel, device, state);**
+
+systemCode = (int)one of the 32 channels [1 - 32]
+
+device = (char)one of the 5 devices on the channel [A - E]
+
+state = (boolean) true for on, false for off 
+
+```javascript
+impuls.sendSwitch(2, 'A', true);
+```
+## Blokker control module
+
+**piLight.blokker(pin, [period])**
+
+pin = data pin of transmitter
+
+period = bit interval, default: 320
+
+```javascript
+var blokker = piLight.blokker(17);
+```
+
+**blokker.sendSwitch(device, state);**
+
+device = (int)one of the 16 devices [1 - 16]
+
+state = (boolean) true for on, false for off 
+
+```javascript
+blokker.sendSwitch(2, true);
 ```
 
 ## Contributing
