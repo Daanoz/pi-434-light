@@ -14,14 +14,20 @@
     "url": "git@github.com:daanoz/pi-434-light.git"
   },
   "keywords": [
+    "elro",
+    "blokker",
+    "impuls",
+    "action",
     "kaku",
     "klik",
     "aan",
     "klik",
     "uit",
     "434",
-    "mhz",
+    "434mhz",
+    "434.93",
     "433.93mhz",
+    "mhz",
     "wiring-pi"
   ],
   "author": "Daan Sieben",
