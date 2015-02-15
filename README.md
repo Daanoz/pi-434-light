@@ -25,12 +25,11 @@ npm install daanoz/pi-434-light
 
 ```javascript
 var piLight = require('pi-434-light');
-piLight.setPinMode('phys');
 ```
 
 **setPinMode(mode)**
 
-for usage click [here](https://github.com/eugeneware/wiring-pi/blob/master/DOCUMENTATION.md#setupmode)
+for usage refer to [wiring-pi docs](https://github.com/eugeneware/wiring-pi/blob/master/DOCUMENTATION.md#setupmode)
 
 *currently only 'phys' seems to be working*
 
@@ -60,6 +59,20 @@ state = (boolean) true for on, false for off
 
 ```javascript
 kaku.sendSwitch('A', 2, true);
+```
+
+**kaku.sendGroupSwitch(channel, group, device, state);**
+
+channel = (char)one of the 16 channels [A - P]
+
+group = (int)one of the 16 groups [1 - 16]
+
+device = (int)one of the 16 devices on the channel [1 - 16]
+
+state = (boolean) true for on, false for off 
+
+```javascript
+kaku.sendGroupSwitch('A', 3, 2, true);
 ```
 
 ## Elro control module
